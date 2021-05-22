@@ -22,15 +22,6 @@ pip install requirements.txt
 #### Required Arguments
 
 ``` python
-usage: generate.py [-h] [--train TRAINING_PATH] [--dev DEV_PATH]
-                   [--test1 TESTING_PATH] [--test2 TESTING2_PATH]
-                   [--test2_gt TESTING2_GT_PATH] [--umls UMLS_PATH]
-                   [--annotaion_f ANNOTAION_F] [--dest CONSTRUCTED_FILE]
-
-setup - Arguments get parsed via --commands
-
-optional arguments:
-  -h, --help            show this help message and exit
   --train TRAINING_PATH
                         The path of MedNLI training file
   --dev DEV_PATH        The path of MedNLI dev file

@@ -22,6 +22,14 @@ pip install requirements.txt
 #### Required Arguments
 
 ``` python
+usage: generate.py [-h] --train TRAINING_PATH --dev DEV_PATH --test1
+                   TESTING_PATH --test2 TESTING2_PATH --test2_gt
+                   TESTING2_GT_PATH --umls UMLS_PATH --annotaion_f ANNOTAION_F
+                   --dest CONSTRUCTED_FILE
+
+setup - Arguments get parsed via --commands
+
+required arguments:
   --train TRAINING_PATH
                         The path of MedNLI training file
   --dev DEV_PATH        The path of MedNLI dev file
@@ -35,7 +43,6 @@ pip install requirements.txt
                         Annotaion file path
   --dest CONSTRUCTED_FILE
                         The path to store the constructed dataset
-
 ``` 
 
 #### Example

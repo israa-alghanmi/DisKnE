@@ -100,8 +100,8 @@ if __name__ == '__main__':
     df= pd.concat(frames)
     #<<-------------Load UMLS--------------->>
     default_world.set_backend(filename = "pym3.sqlite3")
-    #import_umls(args.umls_path, terminologies = ["ICD10", "SNOMEDCT_US", "CUI"])
-    #default_world.save()
+    import_umls(args.umls_path, terminologies = ["ICD10", "SNOMEDCT_US", "CUI"])
+    default_world.save()
     PYM = get_ontology("http://PYM/").load()
     CUI2 = PYM["CUI"]
     SNOMEDCT_US = PYM["SNOMEDCT_US"]

@@ -3,18 +3,17 @@ This repository contains Python scripts for evaluating and constructing the Dise
 ___
 
 ## DisKnE Construction
-### Requirements:
+#### Requirements:
 License and access to the following resources are needed to reconstruct the dataset:
-#### 1. Datasets
+##### 1. Datasets
 * [MedNLI](https://physionet.org/content/mednli/1.0.0/)
 * [MEDIQA-NLI](https://physionet.org/content/mednli-bionlp19/1.0.1/)
-#### 2. [UMLS](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html)
-We use umls-2020AA-full version.
-#### 3. DisKnE annotation files
+##### 2. [UMLS](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html): We use umls-2020AA-full version.
+#### DisKnE annotation files
 Each annotation file represents a variant of DisKnE, to assess medical or terminological knowledge: 
 * Medical-similar, terminological-similar: Negative examples are selected as being most similar to the target disease from a pre-defined list.
 * Medical-random, terminological-random: Negative examples are selected at random from a pre-defined list. 
-#### 4. Installing the required packages
+#### Installing the required packages
 ``` python
 pip install requirements.txt
 ``` 

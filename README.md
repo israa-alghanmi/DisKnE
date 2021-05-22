@@ -3,7 +3,8 @@ This repository contains Python scripts for evaluating and constructing the Dise
 ___
 
 ## DisKnE Construction
-#### Requirements:
+#### Requirements
+
 License and access to the following resources are needed to reconstruct the dataset:
 ##### 1. Datasets
 * [MedNLI](https://physionet.org/content/mednli/1.0.0/)

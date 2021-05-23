@@ -1,5 +1,5 @@
 # Disease Knowledge Evaluation - DisKnE
-This repository contains Python scripts for evaluating and constructing the Disease Knowledge Evaluation benchmark (DisKnE) proposed in the paper: Probing Pre-Trained Language Models for Disease Knowledge.
+This repository contains Python scripts for evaluating and constructing the Disease Knowledge Evaluation benchmark (DisKnE) proposed in the paper: __Probing Pre-Trained Language Models for Disease Knowledge__.
 ___
 
 ## DisKnE Construction

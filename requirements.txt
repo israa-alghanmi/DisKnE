@@ -1,0 +1,7 @@
+Keras==2.4.3
+pandas==1.1.4
+Owlready2==0.26
+transformers==4.0.0
+numpy==1.18.5
+torch==1.7.0
+scikit_learn==0.24.2

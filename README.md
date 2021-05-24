@@ -82,7 +82,7 @@ optional arguments:
                         hypothesis-only baseline: disease_only
 ``` 
 
-### Example
+### Examples
 * #### Medical-random for tests to diseases category
 ``` python
 python "evaluation.py" --data_path "./DisknE_medical_random.csv" --umls_path "./umls-2020AA-full.zip" --type "random" --category "tests_diseases" --seed_val=12345

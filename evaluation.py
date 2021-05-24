@@ -34,9 +34,9 @@ def parse_arguments():
     parser.add_argument('--pym_path', dest='pym_path', type=str, default="./pym.sqlite3",
         help='Required- Path to store pym file, needed to import UMLS in Python')
     parser.add_argument('--type', dest='type', type=str, default="similar", help='Required- For medical knowledge choose either: 1.similar 2.random, for terminological knowledge: 1.terminological_similar 2. terminological_random')
-    parser.add_argument('--category', dest='cate', type=str, default="", help='Required only when evaluating medical knowledge where a category need to be specified: 1.symptoms_diseases 2.treatments_diseases 3.tests_diseases 4.procedure_diseases, for terminological skip. ')
+    parser.add_argument('--category', dest='cate', type=str, default="", help='Required only for medical knowledge where a category need to be specified: 1.symptoms_diseases 2.treatments_diseases 3.tests_diseases 4.procedure_diseases, for terminological skip. ')
     parser.add_argument('--seed_val', dest='seed_val', type=int, default="42", help='Required- Seed value')
-    parser.add_argument('--input_type', dest='input_type', type=str, default="", help='Optional- use when evaluating the canonicalized hypothesis-only baseline: disease_only ')
+    parser.add_argument('--input_type', dest='input_type', type=str, default="", help='Optional- use for running the canonicalized hypothesis-only baseline: disease_only ')
     args = parser.parse_args()
     return args
 

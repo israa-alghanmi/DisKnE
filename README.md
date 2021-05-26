@@ -15,13 +15,13 @@ Each annotation file represents a variant of DisKnE, to assess medical or termin
 * Medical-similar, terminological-similar: Negative examples are selected as being the most similar to the target disease from a pre-defined list.
 * Medical-random, terminological-random: Negative examples are selected at random from a pre-defined list. 
 #### Installing the required packages
-``` python
+``` 
 pip install requirements.txt
 ``` 
 
 #### Required Arguments
 
-``` python
+``` 
 usage: generate.py [-h] --train TRAINING_PATH --dev DEV_PATH --test1
                    TESTING_PATH --test2 TESTING2_PATH --test2_gt
                    TESTING2_GT_PATH --umls UMLS_PATH --annotaion_f ANNOTAION_F
@@ -46,7 +46,7 @@ required arguments:
 ``` 
 
 #### Example
-``` python
+``` 
 python "generate.py" --train "./mli_train_v1.jsonl" --dev  "./mli_dev_v1.jsonl" --test1 "./mli_test_v1.jsonl" --test2 "./mednli_bionlp19_shared_task.jsonl" --test2_gt "./mednli_bionlp19_shared_task_ground_truth.csv" --annotaion_f "./DisknE_similar_annotation.csv" --dest "./DisknE_medical_similar.csv" --umls "./umls-2020AA-full.zip"
 ``` 
 
@@ -54,7 +54,7 @@ python "generate.py" --train "./mli_train_v1.jsonl" --dev  "./mli_dev_v1.jsonl" 
 ## Evaluation
 
 
-``` python
+``` 
 usage: evaluation.py [-h] [--data_path DATA_PATH] [--umls_path UMLS_PATH]
                      [--pym_path PYM_PATH] [--type TYPE] [--category CATE]
                      [--seed_val SEED_VAL] [--input_type INPUT_TYPE]
@@ -84,12 +84,12 @@ optional arguments:
 
 ### Examples
 * #### Medical-random for tests to diseases category
-``` python
+```
 python "evaluation.py" --data_path "./DisknE_medical_random.csv" --umls_path "./umls-2020AA-full.zip" --type "random" --category "tests_diseases" --seed_val=12345
 ``` 
 
 * #### Terminological-similar 
-``` python
+``` 
 python "evaluation.py" --data_path "./DisknE_medical_random.csv" --umls_path "./umls-2020AA-full.zip" --type "terminological_similar" --seed_val=12345
 ``` 
 ___

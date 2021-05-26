@@ -85,12 +85,12 @@ optional arguments:
 ### Examples
 * #### Medical-random for tests to diseases category
 ```
-python "evaluation.py" --data_path "./DisknE_medical_random.csv" --umls_path "./umls-2020AA-full.zip" --type "random" --category "tests_diseases" --seed_val=12345
+python evaluation.py --data_path "./DisknE_medical_random.csv" --umls_path "./umls-2020AA-full.zip" --type "random" --category "tests_diseases" --seed_val=12345
 ``` 
 
 * #### Terminological-similar 
 ``` 
-python "evaluation.py" --data_path "./DisknE_medical_random.csv" --umls_path "./umls-2020AA-full.zip" --type "terminological_similar" --seed_val=12345
+python evaluation.py --data_path "./DisknE_medical_random.csv" --umls_path "./umls-2020AA-full.zip" --type "terminological_similar" --seed_val=12345
 ``` 
 ___
 <!--- ## Citation-->

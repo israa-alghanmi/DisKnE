@@ -93,4 +93,7 @@ python evaluation.py --data_path "./DisknE_medical_random.csv" --umls_path "./um
 python evaluation.py --data_path "./DisknE_medical_random.csv" --umls_path "./umls-2020AA-full.zip" --type "terminological_similar" --seed_val=12345
 ``` 
 ___
-<!--- ## Citation-->
+## Citation
+``` 
+Coming soon..
+``` 

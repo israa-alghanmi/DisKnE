@@ -1,5 +1,5 @@
 # Disease Knowledge Evaluation - DisKnE
-This repository contains Python scripts for evaluating and constructing the Disease Knowledge Evaluation benchmark (DisKnE) introduced in the paper: __Probing Pre-Trained Language Models for Disease Knowledge__.
+This repository contains Python scripts for evaluating and constructing the Disease Knowledge Evaluation benchmark (DisKnE) introduced in the paper: [__Probing Pre-Trained Language Models for Disease Knowledge__.](https://aclanthology.org/2021.findings-acl.266.pdf)
 ___
 
 ## DisKnE Construction
@@ -95,5 +95,19 @@ python evaluation.py --data_path "./DisknE_medical_random.csv" --umls_path "./um
 ___
 ## Citation
 ``` 
-Coming soon..
+@inproceedings{alghanmi-etal-2021-probing,
+    title = "Probing Pre-Trained Language Models for Disease Knowledge",
+    author = "Alghanmi, Israa  and
+      Espinosa Anke, Luis  and
+      Schockaert, Steven",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.findings-acl.266",
+    doi = "10.18653/v1/2021.findings-acl.266",
+    pages = "3023--3033",
+}
+
 ``` 

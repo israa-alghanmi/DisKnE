@@ -51,47 +51,61 @@ python "generate.py" --train "./mli_train_v1.jsonl" --dev  "./mli_dev_v1.jsonl" 
 ``` 
 
 
-## Evaluation
-
+#### Training-Test Splits
 
 ``` 
-usage: evaluation.py [-h] [--data_path DATA_PATH] [--umls_path UMLS_PATH]
-                     [--pym_path PYM_PATH] [--type TYPE] [--category CATE]
-                     [--seed_val SEED_VAL] [--input_type INPUT_TYPE]
+usage: splits.py [-h] [--data_path DATA_PATH] [--umls_path UMLS_PATH]
+                 [--pym_path PYM_PATH] [--type TYPE] [--category CATE]
+                 [--save_dir SAVE_DIR]
 
 Experiment setup - Arguments get parsed via --commands
 
 optional arguments:
   -h, --help            show this help message and exit
   --data_path DATA_PATH
-                        Required- DisknE dataset path
+                        Required- DisknE main dataset path
   --umls_path UMLS_PATH
                         Required- UMLS file path
-  --pym_path PYM_PATH   Required- Path to store pym file, needed to import
-                        UMLS in Python
-  --type TYPE           Required- For medical knowledge choose either:
-                        1.similar 2.random, for terminological knowledge:
-                        1.terminological_similar 2. terminological_random
-  --category CATE       Required only for medical knowledge where
-                        a category need to be specified: 1.symptoms_diseases
-                        2.treatments_diseases 3.tests_diseases
-                        4.procedure_diseases, for terminological skip.
-  --seed_val SEED_VAL   Required- Seed value
-  --input_type INPUT_TYPE
-                        Optional- Use for running the canonicalized
-                        hypothesis-only baseline: disease_only
+  --type TYPE           Required- For medical knowledge choose either
+                        "similar" or "random", for terminological knowledge:
+                        "terminological_similar" or "terminological_random"
+  --category CATE       Required only for medical knowledge in which a
+                        category need to be specified: "symptoms_diseases" or
+                        "treatments_diseases" or "tests_diseases"
+                        "procedure_diseases", for terminological skip.
+  --save_dir SAVE_DIR   Required- Directory to store DisknE diseases
+                        splits
 ``` 
 
-### Examples
+#### Example 
+```
+python "splits.py" --data_path "./DisknE_medical_similar.csv" --umls_path "./umls-2020AA-full.zip" --type 'similar' --category 'symptoms_diseases' --save_dir "./DisKnE"
+```
+
+## Evaluation
+
+
+``` 
+usage: evaluate.py [-h] [--data_dir DATA_DIR] [--BERT_path BERT_PATH]
+                   [--seed_val SEED_VAL]
+
+Experiment setup - Arguments get parsed via --commands
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --data_dir DATA_DIR   Required- Directory path for DisknE diseases splits
+  --BERT_path BERT_PATH
+                        Required- Path to model
+  --seed_val SEED_VAL   Required- Seed value
+
+``` 
+
+### Example
 * #### Medical-random for tests to diseases category
 ```
-python evaluation.py --data_path "./DisknE_medical_random.csv" --umls_path "./umls-2020AA-full.zip" --type "random" --category "tests_diseases" --seed_val=12345
+python "evaluate.py" --data_dir "./DisKnE" --BERT_path "emilyalsentzer/Bio_ClinicalBERT" --seed_val 12345
 ``` 
 
-* #### Terminological-similar 
-``` 
-python evaluation.py --data_path "./DisknE_medical_random.csv" --umls_path "./umls-2020AA-full.zip" --type "terminological_similar" --seed_val=12345
-``` 
 ___
 ## Citation
 ``` 

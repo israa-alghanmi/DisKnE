@@ -101,7 +101,6 @@ optional arguments:
 ``` 
 
 ### Example
-* #### Medical-random for tests to diseases category
 ```
 python "evaluate.py" --data_dir "./DisKnE" --BERT_path "emilyalsentzer/Bio_ClinicalBERT" --seed_val 12345
 ``` 

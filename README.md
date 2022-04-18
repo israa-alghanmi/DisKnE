@@ -19,7 +19,7 @@ Each annotation file represents a variant of DisKnE, to assess medical or termin
 pip install requirements.txt
 ``` 
 
-#### Required Arguments
+#### Main
 
 ``` 
 usage: generate.py [-h] --train TRAINING_PATH --dev DEV_PATH --test1
@@ -78,6 +78,11 @@ optional arguments:
 ``` 
 
 #### Example 
+```
+python "splits.py" --data_path "./DisknE_medical_similar.csv" --umls_path "./umls-2020AA-full.zip" --type 'similar'  --save_dir "./DisKnE"
+```
+
+#### Per Category Example 
 ```
 python "splits.py" --data_path "./DisknE_medical_similar.csv" --umls_path "./umls-2020AA-full.zip" --type 'similar' --category 'symptoms_diseases' --save_dir "./DisKnE"
 ```
